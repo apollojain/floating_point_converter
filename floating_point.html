@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="floating_point.css">
+  <link rel="stylesheet" href="sweetalert.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="sweetalert.min.js"></script>
+  
+  
+</head>
+<body>
+
+<div class="container">
+  <p class="hidden" id="id1"></p>
+  <p class="hidden" id="id2"></p>
+  <p class="hidden" id="id3"></p>
+  <h2>Floating Point Conversion</h2>
+  <p>Uses IEEE 754 Convention</p>                                   
+    <div class="form-group">
+    <label for="exponent">Exponent Bits:</label>
+    <input type="text" id="exponent" class="form-control" >
+  </div>
+  <div class="form-group">
+    <label for="mantissa">Mantissa Bits:</label>
+    <input type="text" id="mantissa" class="form-control">
+  </div>
+  <div>
+    <label for="t1">Floating Point Number:</label><br>
+    <textarea id="t1" rows="4" cols="30%"></textarea>
+  </div>
+  <br>
+  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" onclick="submitData();">Convert
+    </button>
+</div>
+
+<script src="floating_point.js"></script>
+
+</body>
+</html>
