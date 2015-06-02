@@ -11,9 +11,17 @@ function is_binary(num){
 	}
 }
 
+function error(str){
+	sweetAlert({
+				title: "Oops!", 
+				text: str, 
+				type: "error"
+			});
+}
+
 function b2_to_b10(number){
 	if(!is_binary(number)){
-		return 'this number is not binary'
+		return 'This number is not binary'
 	}else{
 		var fin = number.toString().split("").reverse();
 		var len = fin.length;
@@ -83,11 +91,11 @@ function submitData(){
 	var b = parseInt(document.getElementById("mantissa").value);
 	var c = document.getElementById("t1").value;
 	if(!(isInt(a)) || !(isInt(b)) || a < 0 || b < 0 || !(isInt(parseInt(c))) || !(is_binary(parseInt(c)))){
-		displayData("Something seems incorrect. You may have accidentally entered something that isn't a number or something that is negative. Try again.");
+		error("Something seems incorrect. You may have accidentally entered something that isn't a number or something that is negative. Try again.");
 	}else{
 		var nan = c.split("").length;
 		if(nan != (a + b + 1)){
-			displayData("Your floating point number length does not match the values you have given for your exponent and mantissa bits");
+			error("Your floating point number length does not match the values you have given for your exponent and mantissa bits");
 		}else{
 			var sgn = parseInt(c.substring(0, 1));
 			var exp = parseInt(c.substring(1, a + 1));
